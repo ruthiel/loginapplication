@@ -7,7 +7,7 @@
 <h2>Login Application</h2>
 <form action="/loginApplication/" method="post">
     <p>
-        Name: <input type="text" name="formName"/>
+        Username: <input type="text" name="formName"/>
     </p>
 
     <p>

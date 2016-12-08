@@ -7,7 +7,12 @@ import org.academiadecodigo.model.User;
  */
 public interface UserService {
 
-    void authenticate();
+    void addUser(User user);
 
-    User findByName();
+    void removeUser(User user);
+
+    User findUser(String username);
+
+    User getUser(String username);
+
 }

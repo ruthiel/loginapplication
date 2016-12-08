@@ -14,6 +14,7 @@ public class LoginServletController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
 
         dispatcher.forward(req, resp);
@@ -21,6 +22,15 @@ public class LoginServletController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String username = req.getParameter("formName");
+        String password = req.getParameter("formPassword");
+
+        if (username == null || username.isEmpty()) {
+            resp.sendRedirect("WEB-INF/index.jsp");
+        }
+
+
 
     }
 }
