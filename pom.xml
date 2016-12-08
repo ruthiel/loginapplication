@@ -54,7 +54,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>tomcat</server>
-                    <path>/webmvc</path>
+                    <path>/login</path>
                 </configuration>
             </plugin>
         </plugins>
