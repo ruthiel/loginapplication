@@ -12,8 +12,8 @@ import javax.servlet.ServletContextListener;
 public class Application implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        UserService mockUserService = new MockUserService();
-        servletContextEvent.getServletContext().setAttribute("mockUserService", mockUserService);
+        UserService userService = new MockUserService();
+        servletContextEvent.getServletContext().setAttribute("userService", userService);
     }
 
     @Override

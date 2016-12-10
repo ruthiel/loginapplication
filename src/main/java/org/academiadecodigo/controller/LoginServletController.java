@@ -37,24 +37,25 @@ public class LoginServletController extends HttpServlet {
 
         String username = req.getParameter("formName");
         String password = req.getParameter("formPassword");
+        String email = req.getParameter("formEmail");
 
         user = new User();
         user.setUsername(username);
         user.setPassword(password);
+        user.setEmail(email);
 
         RequestDispatcher dispatcher = null;
 
         if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
+            dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jps");
+            dispatcher.forward(req, resp);
         }
-            dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/main.jsp");
+
+        dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/main.jsp");
 
         userService.addUser(user);
         req.setAttribute("user", user);
         dispatcher.forward(req, resp);
-
-
-
-
 
 
     }
