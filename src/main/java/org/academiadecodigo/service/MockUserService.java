@@ -12,8 +12,8 @@ public class MockUserService implements UserService{
 
     private List<User> userList;
 
-    public MockUserService(List<User> userList) {
-        this.userList = userList;
+    public MockUserService() {
+        userList = new ArrayList<>();
     }
 
     @Override

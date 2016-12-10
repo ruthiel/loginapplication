@@ -7,12 +7,12 @@ public class User {
 
     private String username;
     private String email;
-    private int password;
+    private String password;
 
     public User() {
     }
 
-    public User(int password, String email, String username) {
+    public User(String password, String email, String username) {
         this.password = password;
         this.email = email;
         this.username = username;
@@ -34,11 +34,11 @@ public class User {
         this.email = email;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 }
