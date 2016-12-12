@@ -22,26 +22,24 @@ public class LoginServletController extends HttpServlet {
 
     private UserService userService;
     private Authenticator authenticator;
+    private RequestDispatcher formtDispatcher;
 
-    static Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger(LoginServletController.class);
 
     @Override
     public void init() throws ServletException {
 
         logger.log(Level.INFO, "Initializing Servlet");
-
         authenticator = (Authenticator) getServletContext().getAttribute(org.academiadecodigo.app.Attribute.AUTH_SERVICE);
         userService = (UserService) getServletContext().getAttribute(org.academiadecodigo.app.Attribute.USER_SERVICE);
+        formtDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         logger.log(Level.INFO, "Get request received");
-
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
-
-        dispatcher.forward(req, resp);
+        formtDispatcher.forward(req, resp);
     }
 
     @Override
@@ -49,36 +47,35 @@ public class LoginServletController extends HttpServlet {
 
         logger.log(Level.INFO, "POST request received");
 
-        Logger byClass = LogManager.getLogger(LoginServletController.class);
-        Logger byName = LogManager.getLogger("org.academiadecodigo.controller.LoginServletController");
+        String username = req.getParameter(org.academiadecodigo.app.Attribute.USER_NAME);
+        String password = req.getParameter(org.academiadecodigo.app.Attribute.USER_PASSWORD);
 
-        String username = req.getParameter("formName");
-        String password = req.getParameter("formPassword");
-        String email = req.getParameter("formEmail");
+        if (username == null || username.isEmpty() ||
+                password == null || password.isEmpty()) {
+            resp.sendRedirect("/login");
+            logger.log(Level.INFO, "Test");
+            return;
+        }
 
-        User user= new User();
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setEmail(email);
+        if (authenticator.authenticate(username, password)) {
+            logger.log(Level.INFO, "Authentication succeed for " + username);
 
-        RequestDispatcher dispatcher = null;
+            req.getSession().setAttribute(org.academiadecodigo.app.Attribute.USER_NAME, username);
+            req.getSession().setAttribute(org.academiadecodigo.app.Attribute.AUTH_STATE, false);
+            req.getSession().setAttribute(org.academiadecodigo.app.Attribute.USER_LIST, userService.findAll());
 
-        if (username == null || username.isEmpty() || password == null || password.isEmpty()) { // TODO: 12/12/16 missing authenticate
-            dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
-            dispatcher.forward(req, resp);
+            RequestDispatcher mainDispatcher = getServletContext().getRequestDispatcher("/WEB-INF/main.jsp");
+            mainDispatcher.forward(req, resp);
         } else {
-            dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/main.jsp");
 
-            userService.addUser(user);
-            req.setAttribute("user", user);
-            dispatcher.forward(req, resp);
+            logger.log(Level.INFO, "Authentication failed!");
+
+            req.getSession().setAttribute(org.academiadecodigo.app.Attribute.AUTH_STATE, true);
+            formtDispatcher.forward(req, resp);
+
         }
-
-        if (byClass != byName && byName != logger) {
-            logger.error("Loggers not the same!");
-        }
-
-        logger.warn("This is a warning!");
 
     }
+
 }
+

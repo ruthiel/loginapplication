@@ -1,3 +1,4 @@
+org/academiadecodigo/app/Attribute.class
 org/academiadecodigo/Main.class
 org/academiadecodigo/service/MockUserService.class
 org/academiadecodigo/auth/Authenticator.class

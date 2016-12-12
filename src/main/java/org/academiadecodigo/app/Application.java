@@ -1,6 +1,7 @@
 package org.academiadecodigo.app;
 
 import org.academiadecodigo.auth.Authenticator;
+import org.academiadecodigo.model.User;
 import org.academiadecodigo.service.MockUserService;
 import org.academiadecodigo.service.UserService;
 
@@ -23,8 +24,13 @@ public class Application implements ServletContextListener {
         UserService userService = new MockUserService();
         authenticator.setUserService(userService);
 
-        ctx.setAttribute(
-        ctx.setAttribute(
+        ctx.setAttribute(org.academiadecodigo.app.Attribute.AUTH_SERVICE, authenticator);
+        ctx.setAttribute(org.academiadecodigo.app.Attribute.USER_SERVICE, userService);
+
+        //test users
+        userService.addUser(new User("12345", "ruthiel.trevisan@gmail.com", "Ruthiel"));
+        userService.addUser(new User("12345", "Ricardo@gmail.com", "Ricardo"));
+        userService.addUser(new User("12345", "Joana@gmail.com", "Joana"));
     }
 
     @Override

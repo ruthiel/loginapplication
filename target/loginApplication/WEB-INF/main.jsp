@@ -1,26 +1,47 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: codecadet
-  Date: 08/12/16
-  Time: 17:26
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Web Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          type="text/css"/>
+    <!-- script references -->
+    <script type="application/javascript" async
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <meta name="generator" content="Bootply"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
-<h1>Bem-vindo a esta página de Login!</h1>
-<span>Foste adicionado ${user.username}!</span>
-<h2>List of Bootcamp Users:</h2>
-<c:if test="${not empty users}">
-    <ul>
-        <c:forEach var="user" items="${users}">
-            <li>${user.username} <strong>${user.email}</strong></li>
-        </c:forEach>
-    </ul>
-</c:if>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">${username}</h1>
+        <p class="lead">Welcome to our amazing application..<p>
+        <h3 class="text-info">List of Users:</h3>
+        <c:if test="${not empty users}">
+
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <c:forEach var="user" items="${users}">
+                    <tr>
+                        <td>${user.username}</td>
+                        <td>${user.email}</td>
+                    </tr>
+                </c:forEach>
+
+            </table>
+
+        </c:if>
+    </div>
+</div>
+
 </body>
 </html>
