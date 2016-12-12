@@ -15,7 +15,7 @@
         <console name="Console" target="SYSTEM_OUT">
             <patternlayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </console>
-        <file name="File1" filename="info.log" bufferedio="true">
+        <file name="File1" filename="log.txt" bufferedio="true">
             <patternlayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </file>
     </appenders>

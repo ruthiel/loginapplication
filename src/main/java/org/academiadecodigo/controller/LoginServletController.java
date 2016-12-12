@@ -3,9 +3,11 @@ package org.academiadecodigo.controller;
 import org.academiadecodigo.auth.Authenticator;
 import org.academiadecodigo.model.User;
 import org.academiadecodigo.service.UserService;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.management.Attribute;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,11 +27,17 @@ public class LoginServletController extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        userService = (UserService) getServletContext().getAttribute("userService");
+
+        logger.log(Level.INFO, "Initializing Servlet");
+
+        authenticator = (Authenticator) getServletContext().getAttribute(org.academiadecodigo.app.Attribute.AUTH_SERVICE);
+        userService = (UserService) getServletContext().getAttribute(org.academiadecodigo.app.Attribute.USER_SERVICE);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        logger.log(Level.INFO, "Get request received");
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
 
@@ -38,6 +46,8 @@ public class LoginServletController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        logger.log(Level.INFO, "POST request received");
 
         Logger byClass = LogManager.getLogger(LoginServletController.class);
         Logger byName = LogManager.getLogger("org.academiadecodigo.controller.LoginServletController");

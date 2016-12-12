@@ -1,8 +1,11 @@
 package org.academiadecodigo.app;
 
+import org.academiadecodigo.auth.Authenticator;
 import org.academiadecodigo.service.MockUserService;
 import org.academiadecodigo.service.UserService;
 
+import javax.management.Attribute;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -13,8 +16,15 @@ public class Application implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
+
+        ServletContext ctx = servletContextEvent.getServletContext();
+
+        Authenticator authenticator = new Authenticator();
         UserService userService = new MockUserService();
-        servletContextEvent.getServletContext().setAttribute("userService", userService);
+        authenticator.setUserService(userService);
+
+        ctx.setAttribute(
+        ctx.setAttribute(
     }
 
     @Override
