@@ -27,23 +27,7 @@
         </form>
 
     </div>
-        <%--<form action="/login/" method="post">--%>
-        <%--<p>--%>
-        <%--Username: <input type="text" name="formName"/>--%>
-        <%--</p>--%>
+</div>
 
-        <%--<p>--%>
-        <%--Password: <input type="password" name="formPassword"/>--%>
-
-        <%--</p>--%>
-
-        <%--<p>--%>
-        <%--E-mail: <input type="email" name="formEmail"/>--%>
-        <%--</p>--%>
-
-        <%--<p>--%>
-        <%--<input type="submit" value="Submit">--%>
-        <%--</p>--%>
-        <%--</form>--%>
 </body>
 </html>

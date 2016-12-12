@@ -1,0 +1,22 @@
+<configuration status="WARN">
+    <loggers>
+        <logger name="org.academiadecodigo.controller.LoginServletController" level="trace" additivity="false">
+            <appenderref ref="Console"/>
+            <appenderref ref="File1"/>
+        </logger>
+
+        <root level="error">
+            <appenderref ref="Console"/>
+            <appenderref ref="File1"/>
+        </root>
+    </loggers>
+
+    <appenders>
+        <console name="Console" target="SYSTEM_OUT">
+            <patternlayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </console>
+        <file name="File1" filename="info.log" bufferedio="true">
+            <patternlayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </file>
+    </appenders>
+</configuration>

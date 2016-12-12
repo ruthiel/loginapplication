@@ -14,13 +14,13 @@
 <body>
 <h1>Bem-vindo a esta página de Login!</h1>
 <span>Foste adicionado ${user.username}!</span>
-<%--<h2>List of Bootcamp Users:</h2>--%>
-<%--<c:if test="${not empty users}">--%>
-    <%--<ul>--%>
-        <%--<c:forEach var="user" items="${users}">--%>
-            <%--<li>${user.username} <strong>${user.email}</strong></li>--%>
-        <%--</c:forEach>--%>
-    <%--</ul>--%>
-<%--</c:if>--%>
+<h2>List of Bootcamp Users:</h2>
+<c:if test="${not empty users}">
+    <ul>
+        <c:forEach var="user" items="${users}">
+            <li>${user.username} <strong>${user.email}</strong></li>
+        </c:forEach>
+    </ul>
+</c:if>
 </body>
 </html>
