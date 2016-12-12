@@ -11,37 +11,22 @@
 <h2>Login Application</h2>
 <div class="container">
 
-    <div class="row" style="margin-top:20px">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-            <form action="/login/" method="post" role="form">
-                <fieldset>
-                    <h2>Escreve as tuas credenciais:</h2>
-                    <hr class="colorgraph">
-                    <div class="form-group">
-                        <input type="text" name="formName" id="username" class="form-control input-lg"
-                               placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" id="password" class="form-control input-lg"
-                               placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg"
-                               placeholder="Email Address">
-                    </div>
-				<span class="button-checkbox">
-				</span>
-                    <hr class="colorgraph">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <input type="submit" class="btn btn-lg btn-success btn-block" value="Submit">
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
 
+    <div id="fullscreen_bg" class="fullscreen_bg"/>
 
+    <div class="container">
+
+        <form action="/login/" method="post" class="form-signin">
+            <h1 class="form-signin-heading text-muted">Log In</h1>
+            <input type="text" class="form-control" placeholder="Name" required="" autofocus="" name="formUser">
+            <input type="password" class="form-control" placeholder="Password" required="" name="formPassword">
+            <input type="email" class="form-control" placeholder="Email Adress" required="" name="formEmail">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Log In
+            </button>
+        </form>
+
+    </div>
         <%--<form action="/login/" method="post">--%>
         <%--<p>--%>
         <%--Username: <input type="text" name="formName"/>--%>

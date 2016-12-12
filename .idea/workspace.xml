@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c86e85cd-a44b-4534-bbaa-cc029e5666c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/auth/Authenticator.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/auth/Authenticator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/academiadecodigo/controller/LoginServletController.class" afterPath="$PROJECT_DIR$/target/classes/org/academiadecodigo/controller/LoginServletController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/loginApplication.war" afterPath="$PROJECT_DIR$/target/loginApplication.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/loginApplication/WEB-INF/classes/org/academiadecodigo/auth/Authenticator.class" afterPath="$PROJECT_DIR$/target/loginApplication/WEB-INF/classes/org/academiadecodigo/auth/Authenticator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/loginApplication/WEB-INF/classes/org/academiadecodigo/controller/LoginServletController.class" afterPath="$PROJECT_DIR$/target/loginApplication/WEB-INF/classes/org/academiadecodigo/controller/LoginServletController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/app/Application.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/app/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoginServletController.java" afterPath="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoginServletController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/loginApplication/WEB-INF/index.jsp" afterPath="$PROJECT_DIR$/target/loginApplication/WEB-INF/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/loginApplication/WEB-INF/main.jsp" afterPath="$PROJECT_DIR$/target/loginApplication/WEB-INF/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="loginApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -131,8 +119,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="552">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,8 +129,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="1185">
+              <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -203,8 +191,8 @@
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/auth/Authenticator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/controller/LoginServletController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/academiadecodigo/app/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/styles.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/styles.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" />
       </list>
     </option>
@@ -943,7 +931,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1481217754922</updated>
-      <workItem from="1481217759452" duration="21422000" />
+      <workItem from="1481217759452" duration="22108000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore; add POJO User">
       <created>1481219175666</created>
@@ -970,7 +958,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21422000" />
+    <option name="totallyTimeSpent" value="22108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1015" extended-state="6" />
@@ -1041,14 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1145,10 +1125,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="552">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>
