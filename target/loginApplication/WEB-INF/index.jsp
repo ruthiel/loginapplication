@@ -23,8 +23,8 @@
                 <p class="form-title">
                     Login</p>
                 <form class="login" method="post" action="${pageContext.request.contextPath}/">
-                    <input type="text" placeholder="Username"/>
-                    <input type="password" placeholder="Password"/>
+                    <input type="text" placeholder="Username" name="username"/>
+                    <input type="password" placeholder="Password" name="password"/>
                     <input type="email" placeholder="Email"/>
                     <input type="submit" value="Submit" class="btn btn-success btn-sm"/>
                     <br/><span class="pull-right">

@@ -16,7 +16,7 @@
             <patternlayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </console>
         <file name="File1" filename="Logger.txt" bufferedio="true">
-            <patternlayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <patternlayout pattern="%d{HH:mm:ss.SSS} [%t] [%class{1}.%method] %-5level %logger{36} - %msg%n"/>
         </file>
     </appenders>
 </configuration>

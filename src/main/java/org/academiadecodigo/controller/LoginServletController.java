@@ -37,7 +37,7 @@ public class LoginServletController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        logger.log(Level.INFO, "Get request received");
+        logger.log(Level.INFO, "GET request received");
         formDispatcher.forward(req, resp);
     }
 
@@ -69,7 +69,7 @@ public class LoginServletController extends HttpServlet {
 
             logger.log(Level.INFO, "Authentication failed!");
 
-            req.getSession().setAttribute(org.academiadecodigo.app.Attribute.AUTH_STATE, true);
+            req.getSession().setAttribute(Attribute.AUTH_STATE, true);
             formDispatcher.forward(req, resp);
 
         }
