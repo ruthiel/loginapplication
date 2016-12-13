@@ -5,7 +5,6 @@ import org.academiadecodigo.model.User;
 import org.academiadecodigo.service.MockUserService;
 import org.academiadecodigo.service.UserService;
 
-import javax.management.Attribute;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -24,8 +23,8 @@ public class Application implements ServletContextListener {
         UserService userService = new MockUserService();
         authenticator.setUserService(userService);
 
-        ctx.setAttribute(org.academiadecodigo.app.Attribute.AUTH_SERVICE, authenticator);
-        ctx.setAttribute(org.academiadecodigo.app.Attribute.USER_SERVICE, userService);
+        ctx.setAttribute(Attribute.AUTH_SERVICE, authenticator);
+        ctx.setAttribute(Attribute.USER_SERVICE, userService);
 
         //test users
         userService.addUser(new User("12345", "ruthiel.trevisan@gmail.com", "Ruthiel"));
